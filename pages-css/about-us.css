@@ -1,0 +1,96 @@
+.intro {
+    margin-inline: 3rem;
+    margin-bottom: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.intro__content {
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.intro__title {
+    color: var(--J---Third, #1D3D58);
+    font-family: Inter;
+    font-size: clamp(1.75rem, 0.8125rem + 3vw, 2.5rem);    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.intro__subheading {
+    color: var(--J---Third, #1D3D58);
+    font-family: Inter;
+    font-size: clamp(1.75rem, 0.8125rem + 3vw, 2.5rem);    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.intro__text {
+    color: var(--J---Third, #1D3D58);
+    font-family: Inter;
+    font-size: clamp(1.15rem, 0.7125rem + 1.4vw, 1.5rem);
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.intro__img {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: 3rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.our-staff {
+    max-width: 1920px;
+    margin-inline: 3rem;
+    margin-bottom: 6rem;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3rem;
+    row-gap: 2rem;
+
+}
+
+.our-staff__card {
+    max-width: 16rem;
+    padding-block: 1.25rem;
+    padding-inline: 1rem;
+
+    border-radius: 1.5625rem;
+    border: 1px solid var(--Border-Grey, #D2D2D2);
+    background: var(--Faded-Blue, rgba(195, 201, 213, 0.16));
+    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+.our-staff__top {
+    display: flex;
+}
+
+.our-staff__details {
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.our-staff__text {
+    padding-block: 3rem;
+    color: #000;
+    font-family: "Istok Web";
+    font-weight: 400;
+    line-height: 1.5;
+}

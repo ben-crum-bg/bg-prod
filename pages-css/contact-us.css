@@ -1,0 +1,66 @@
+header {
+    border-bottom: 1px solid #D2D2D2;
+
+    background: #FBFDFF;
+}
+
+.contact-us-container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.contact-us {
+    margin-inline: 3rem;
+}
+
+.callout-title {
+    margin-top: 5rem;
+    max-width: 50%;
+
+    color: var(--J---Third, #1D3D58);
+    font-family: "Istok Web";
+    font-size: clamp(1.55rem, -0.8875rem + 7.8vw, 3.5rem);
+    font-weight: 700;
+
+}
+
+.contact-form--modified {
+    row-gap: 2rem;
+    margin-top: 1rem;
+    margin-inline: auto;
+}
+
+.contact-form--modified .contact-form__title {
+    justify-self: end;
+    color: var(--J---Third, #1D3D58);
+    font-family: "Istok Web";
+    font-size: clamp(1.75rem, 0.8125rem + 3vw, 2.5rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-form--modified .contact-form__button {
+    justify-self: self-start;
+}
+
+@media (max-width: 1500px) {
+    .callout-title {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contact-form--modified .contact-form__title {
+        justify-self: center;
+    }
+
+    .contact-form--modified .contact-form__button {
+        justify-self: center;
+        padding-inline: 5rem;
+    }
+}
