@@ -35,9 +35,11 @@ function openNav() {
     navOpen.style.display = 'none';
     navClose.style.display = 'inline';
 
-    // Testing
-    console.log('Open Navbar');
+    // Focuses Close button
+    button.focus();
 
+    // Testing
+    // console.log('Open Navbar');
     resizeMobileNav();
 }
 
@@ -57,6 +59,6 @@ function closeNav() {
     navLinks.removeAttribute('style');
 
     // Testing
-    console.log('Close Navbar');
+    // console.log('Close Navbar');
 }
 
