@@ -108,6 +108,23 @@ a {
     font-family: "Istok Web", sans-serif;
 }
 
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    opacity: 0;
+
+}
+
+.skip-to-content:focus {
+    left: 5%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
