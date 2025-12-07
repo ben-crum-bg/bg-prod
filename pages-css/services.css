@@ -127,6 +127,11 @@
     border-color: #D60F84;
 }
 
+/* .services-cards-bubbles  */
+.services-cards--bubbles .card__right {
+    margin-block: auto;
+}
+
 .services-cards--bubbles .card__img {
     max-height: 16rem;
     aspect-ratio: 1 / 1;
