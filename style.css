@@ -149,12 +149,9 @@ a {
 
 /* Start Header */
 .header {
-    /* box-shadow: black 0px 5px 10px -5px; */
-
     margin-bottom: 2rem;
     max-width: var(--max-width-900);
     padding-inline: var(--inline-padding);
-    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-content: center;
