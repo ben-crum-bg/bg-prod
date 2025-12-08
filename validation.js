@@ -119,4 +119,5 @@ function sendData(formData) {
         console.log(data);
     })*/
     clearForm(form);
+    // confirmSubmission();
 };
