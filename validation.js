@@ -113,9 +113,9 @@ function sendData(formData) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
-    }).then(function (response) {
+    })/*.then(function (response) {
         return response.text();
     }).then(function (data) {
         console.log(data);
-    })
+    })*/
 };
