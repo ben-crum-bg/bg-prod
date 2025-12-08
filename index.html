@@ -300,7 +300,7 @@
             </div>
         </section>
 
-        <!-- Form -->
+        <!-- Contact Form Errors -->
         <template id="form-error-template">
             <div class="form-error">
                 <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -311,8 +311,10 @@
                 <p>Error</p>
             </div>
         </template>
+
+        <!-- Contact Form -->
         <section class="contact-form-container">
-            <form action="submit" class="contact-form" id="main-form">
+            <form action="process.php" method="POST" class="contact-form" id="main-form">
                 <h2 class="contact-form__title">
                     Reach Out<span class="accent-text-purple">!</span>
                 </h2>
