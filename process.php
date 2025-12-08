@@ -5,14 +5,20 @@ require_once 'db.php';
 $data = file_get_contents('php://input');
 $dataArray = json_decode($data, true);
 
-$fName = mysqli_real_escape_string($conn, $dataArray['fNameValue']);
-$lName = mysqli_real_escape_string($conn, $dataArray['lNameValue']);
-$phone = mysqli_real_escape_string($conn, $dataArray['phoneValue']);
-$email = mysqli_real_escape_string($conn, $dataArray['emailValue']);
-$message = mysqli_real_escape_string($conn, $dataArray['messageValue']);
+// $fName = mysqli_real_escape_string($conn, $dataArray['fNameValue']);
+// $lName = mysqli_real_escape_string($conn, $dataArray['lNameValue']);
+// $phone = mysqli_real_escape_string($conn, $dataArray['phoneValue']);
+// $email = mysqli_real_escape_string($conn, $dataArray['emailValue']);
+// $message = mysqli_real_escape_string($conn, $dataArray['messageValue']);
+
+$fName = $dataArray['fNameValue'];
+$lName = $dataArray['lNameValue'];
+$phone = $dataArray['phoneValue'];
+$email = $dataArray['emailValue'];
+$message = $dataArray['messageValue'];
 
 // Template
-$sql = "INSERT INTO `ContactInquires`(`first_name`, `last_name`, `phone`, `email`, `message`) VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO `contactinquiries`(`first_name`, `last_name`, `phone`, `email`, `message`) VALUES (?, ?, ?, ?, ?)";
 
 // Create prepared statement
 $stmt = $conn->prepare($sql);
