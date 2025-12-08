@@ -118,4 +118,5 @@ function sendData(formData) {
     }).then(function (data) {
         console.log(data);
     })*/
+    clearForm(form);
 };
