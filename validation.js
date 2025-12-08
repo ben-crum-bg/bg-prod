@@ -6,7 +6,6 @@ function processForm(event) {
     event.preventDefault();
     clearErrors(event);
     validateUser(event);
-    // sanitizeContent();
 }
 
 function clearErrors() {
@@ -52,31 +51,43 @@ function validateForm(event) {
     const messageInput = form.elements['message'];
     const messageValue = messageInput.value.trim();
 
+    const formData = {
+        fNameValue, lNameValue, phoneValue, emailValue, messageValue
+    }
 
     let errorPosition;
+    let validationStatus = true;
 
     if (fNameValue.length < 1) {
         errorPosition = fNameInput;
         addErrorMessage('You must enter a first name', errorPosition);
+        validationStatus = false;
         // console.log('You must enter an email');
     }
 
     if (emailValue.length < 1) {
         errorPosition = emailInput;
         addErrorMessage('You must enter an email', errorPosition);
+        validationStatus = false;
         // console.log('You must enter an email');
     } else {
         if (!emailValue.toString().includes('@')) {
             errorPosition = emailInput;
             addErrorMessage('Your email must include a @ symbol', errorPosition);
+            validationStatus = false;
             // console.log('Your email must include a @ symbol');
         }
 
         if (!emailValue.includes('.')) {
             errorPosition = emailInput;
             addErrorMessage('Your email must include a . symbol', errorPosition);
+            validationStatus = false;
             // console.log('Your email must include a . symbol');
         };
+    }
+
+    if (validationStatus) {
+        sendData(formData);
     }
 };
 
@@ -94,3 +105,17 @@ function addErrorMessage(errorMessage, errorPosition) {
 function clearForm(form) {
     form.reset();
 }
+
+function sendData(formData) {
+    fetch('process.php', {
+        method: 'POST',
+        header: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    }).then(function (response) {
+        return response.text();
+    }).then(function (data) {
+        console.log(data);
+    })
+};
