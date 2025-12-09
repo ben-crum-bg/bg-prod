@@ -426,7 +426,6 @@ div:has(.hero__link) {
 
 @media (max-width: 378px) {
     .hero__links {
-        background-color: red;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
