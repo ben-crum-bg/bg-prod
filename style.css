@@ -736,6 +736,17 @@ div:has(.hero__link) {
     background: var(--J---Magenta-Secondary, #FFFAFB);
 }
 
+.contact-form input:hover::placeholder,
+.contact-form textarea:hover::placeholder {
+    color: var(--J---Third, #1D3D58);
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background: var(--Secondary-Blue, #EAF5FF);
+    border-color: var(--J---Third, #1D3D58);
+}
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: var(--J---A-Magenta, #DF3098);
