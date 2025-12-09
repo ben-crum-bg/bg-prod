@@ -120,7 +120,7 @@ a {
 }
 
 .skip-to-content:focus {
-    left: 5%;
+    left: 5rem;
     transform: translateX(-50%);
     opacity: 1;
 }
