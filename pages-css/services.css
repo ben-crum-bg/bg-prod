@@ -34,12 +34,10 @@
 
 @media (max-width: 800px) {
     .img-hero {
+        min-height: fit-content;
         align-content: start;
+        padding-block: 2rem;
         padding-inline: 2rem;
-    }
-
-    .img-hero__title {
-        margin-top: 2rem;
     }
 }
 
