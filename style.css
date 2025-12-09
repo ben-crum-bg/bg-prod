@@ -397,6 +397,23 @@ div:has(.hero__link) {
     visibility: visible;
 }
 
+@media (max-width: 378px) {
+    .hero__links {
+        background-color: red;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .hero__link {
+        padding-inline: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* End Hero */
 
 /* Start marquee */
