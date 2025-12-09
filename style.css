@@ -196,6 +196,12 @@ header {
     text-underline-offset: 4px;
 }
 
+.nav-links a:focus {
+    border-radius: 0.625rem;
+    outline: 2px solid var(--J---Third, #DF3098);
+    outline-offset: 3px;
+}
+
 h1,
 h2 {
     margin: 0;
