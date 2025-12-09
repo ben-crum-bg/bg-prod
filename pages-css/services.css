@@ -32,6 +32,17 @@
     text-transform: capitalize;
 }
 
+@media (max-width: 800px) {
+    .img-hero {
+        align-content: start;
+        padding-inline: 2rem;
+    }
+
+    .img-hero__title {
+        margin-top: 2rem;
+    }
+}
+
 .service-callout {
     margin-bottom: 3rem;
     padding-block: 2rem;
