@@ -319,11 +319,23 @@ h2 {
         display: flex;
         align-content: center;
         column-gap: .5rem;
+        align-content: center;
+        align-items: center;
+    }
+
+    .mobile-nav-link-container span {
+        align-self: center;
+        vertical-align: middle;
+    }
+
+    .mobile-nav-link-container span {
+        align-self: center;
+        vertical-align: middle;
     }
 
     .mobile-nav-link-container svg {
-        height: 20px;
-        width: 20px;
+        height: 100%;
+
     }
 
     #home-link {
@@ -395,6 +407,10 @@ div:has(.hero__link) {
 
 .hero__link:hover .accent-text-hidden {
     visibility: visible;
+}
+
+.hero__link:focus {
+    border-color: #DF3098;
 }
 
 @media (max-width: 378px) {
