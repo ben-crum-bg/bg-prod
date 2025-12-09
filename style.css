@@ -151,7 +151,7 @@ a {
 .header {
     margin-bottom: 2rem;
     max-width: var(--max-width-900);
-    padding-inline: var(--inline-padding);
+    padding-inline: 2rem;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -200,6 +200,16 @@ h1,
 h2 {
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding-inline: 1rem;
+    }
+
+    #nav-close {
+        margin-inline: 1rem;
+    }
 }
 
 /* Desktop styling */
