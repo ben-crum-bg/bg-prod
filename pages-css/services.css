@@ -127,6 +127,11 @@
     border-color: #D60F84;
 }
 
+.services-cards--bubbles .card__link:focus {
+    outline: solid 2px #D60F84;
+    outline-offset: 3px;
+}
+
 /* .services-cards-bubbles  */
 .services-cards--bubbles .card__right {
     margin-block: auto;
