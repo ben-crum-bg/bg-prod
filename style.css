@@ -119,8 +119,8 @@ a {
 
 }
 
-.skip-to-content:focus {
-    left: 5%;
+.skip-to-content:focus-visible-visible {
+    left: 5rem;
     transform: translateX(-50%);
     opacity: 1;
 }
@@ -151,7 +151,7 @@ a {
 .header {
     margin-bottom: 2rem;
     max-width: var(--max-width-900);
-    padding-inline: var(--inline-padding);
+    padding-inline: 2rem;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -177,6 +177,11 @@ header {
     background: none;
 }
 
+#nav-open:focus-visible,
+#nav-close:focus-visible {
+    outline-color: #DF3098;
+}
+
 .nav-links,
 .nav-links ul {
     list-style: none;
@@ -196,10 +201,26 @@ header {
     text-underline-offset: 4px;
 }
 
+.nav-links a:focus-visible {
+    border-radius: 0.625rem;
+    outline: 2px solid var(--J---Third, #DF3098);
+    outline-offset: 3px;
+}
+
 h1,
 h2 {
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding-inline: 1rem;
+    }
+
+    #nav-close {
+        margin-inline: 1rem;
+    }
 }
 
 /* Desktop styling */
@@ -309,11 +330,23 @@ h2 {
         display: flex;
         align-content: center;
         column-gap: .5rem;
+        align-content: center;
+        align-items: center;
+    }
+
+    .mobile-nav-link-container span {
+        align-self: center;
+        vertical-align: middle;
+    }
+
+    .mobile-nav-link-container span {
+        align-self: center;
+        vertical-align: middle;
     }
 
     .mobile-nav-link-container svg {
-        height: 20px;
-        width: 20px;
+        height: 100%;
+
     }
 
     #home-link {
@@ -385,6 +418,26 @@ div:has(.hero__link) {
 
 .hero__link:hover .accent-text-hidden {
     visibility: visible;
+}
+
+.hero__link:focus-visible {
+    border-color: #DF3098;
+}
+
+@media (max-width: 378px) {
+    .hero__links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .hero__link {
+        padding-inline: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* End Hero */

@@ -33,9 +33,9 @@ $stmt->bind_param("sssss", $fName, $lName, $phone, $email, $message);
 
 // Execute
 if ($stmt->execute()){
-    echo "New contact submission succesful.";
+    // echo "New contact submission succesful.";
 } else {
-    echo "Error: " . $stmt->error;
+    // echo "Error: " . $stmt->error;
 }
 
 // Close

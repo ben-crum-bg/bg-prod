@@ -127,6 +127,11 @@
     border-color: #D60F84;
 }
 
+.services-cards--bubbles .card__link:focus-visible {
+    outline: solid 2px #D60F84;
+    outline-offset: 3px;
+}
+
 /* .services-cards-bubbles  */
 .services-cards--bubbles .card__right {
     margin-block: auto;
@@ -222,7 +227,13 @@
 
 .hero-three a:hover {
     background: var(--J---secondary, #FFF9E0);
-    /* border: 3px solid var(--J---Third, #1D3D58); */
+    color: var(--J---Third, #1D3D58);
+}
+
+.hero-three a:focus-visible {
+    background: var(--J---secondary, #FFF9E0);
+    outline: 3px solid var(--J---secondary, #FFE74A);
+    outline-offset: 3px;
     color: var(--J---Third, #1D3D58);
 }
 

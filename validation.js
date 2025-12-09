@@ -107,7 +107,7 @@ function clearForm(form) {
 }
 
 function sendData(formData) {
-    fetch('process.php', {
+    fetch('/process.php', {
         method: 'POST',
         header: {
             'Content-Type': 'application/json'
@@ -118,4 +118,6 @@ function sendData(formData) {
     }).then(function (data) {
         console.log(data);
     })*/
+    clearForm(form);
+    // confirmSubmission();
 };

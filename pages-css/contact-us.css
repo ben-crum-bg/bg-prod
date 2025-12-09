@@ -1,6 +1,5 @@
 header {
     border-bottom: 1px solid #D2D2D2;
-
     background: #FBFDFF;
 }
 
@@ -11,7 +10,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .contact-us {
@@ -47,6 +45,12 @@ header {
 
 .contact-form--modified .contact-form__button {
     justify-self: self-start;
+}
+
+@media (max-width: 700px) {
+    .callout-title {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 1500px) {
