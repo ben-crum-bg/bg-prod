@@ -119,7 +119,7 @@ a {
 
 }
 
-.skip-to-content:focus-visible-visible {
+.skip-to-content:focus-visible {
     left: 5rem;
     transform: translateX(-50%);
     opacity: 1;
