@@ -32,6 +32,22 @@
     text-transform: capitalize;
 }
 
+@media (max-width: 800px) {
+    .img-hero {
+        min-height: fit-content;
+        align-content: start;
+        padding-block-start: 2rem;
+        padding-block-end: 5rem;
+        padding-inline: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .img-hero {
+        padding-inline: 1rem;
+    }
+}
+
 .service-callout {
     margin-bottom: 3rem;
     padding-block: 2rem;
