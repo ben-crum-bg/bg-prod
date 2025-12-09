@@ -177,6 +177,11 @@ header {
     background: none;
 }
 
+#nav-open:focus-visible,
+#nav-close:focus-visible {
+    outline-color: #DF3098;
+}
+
 .nav-links,
 .nav-links ul {
     list-style: none;
