@@ -23,6 +23,8 @@ window.addEventListener('resize', function () {
     }
 });
 
+backdrop.addEventListener('click', closeNav);
+
 function openMenu() {
     // Opens navbar
     navLinks.style.display = 'flex';
