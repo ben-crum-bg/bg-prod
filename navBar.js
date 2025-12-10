@@ -1,6 +1,11 @@
-// Matches mobile navbar offset to height of header
 const header = document.querySelector('header');
 const button = document.getElementById('nav-close');
+const navOpen = document.getElementById('nav-open');
+const navClose = document.getElementById('nav-close');
+const navLinks = document.getElementById('nav-links');
+const nav = document.getElementById('nav');
+const backdrop = document.getElementById('backdrop');
+const navContinent = document.querySelector('.continent');
 
 resizeMobileNav();
 
@@ -8,16 +13,9 @@ function resizeMobileNav() {
     button.style.height = header.offsetHeight + 'px';
 }
 
-
-// Toggles navbar on button click
-const navOpen = document.getElementById('nav-open');
-const navClose = document.getElementById('nav-close');
-const navLinks = document.getElementById('nav-links');
-const nav = document.getElementById('nav');
-const backdrop = document.getElementById('backdrop');
-
 navOpen.addEventListener('click', openNav);
 navClose.addEventListener('click', closeNav);
+
 
 window.addEventListener('resize', function () {
     if (navClose.style.display === ('inline')) {
@@ -25,7 +23,7 @@ window.addEventListener('resize', function () {
     }
 });
 
-function openNav() {
+function openMenu() {
     // Opens navbar
     navLinks.style.display = 'flex';
 
@@ -44,12 +42,11 @@ function openNav() {
     // Focuses Close button
     button.focus();
 
-    // Testing
-    // console.log('Open Navbar');
+    // Resizes top of mobile nav to match header height
     resizeMobileNav();
 }
 
-function closeNav() {
+function closeMenu() {
     // Closes navbar
     navLinks.style.display = 'none';
 
@@ -68,8 +65,69 @@ function closeNav() {
     nav.classList.toggle('backdrop-focus');
     backdrop.style.display = 'none';
     header.classList.toggle('backdrop-focus');
-
-    // Testing
-    // console.log('Close Navbar');
 }
+
+const focusArray = Array.from(navLinks.querySelectorAll('a'));
+focusArray.unshift(navClose);
+
+let currentFocus;
+let currentIndex;
+let focusState = false;
+let arrayLast;
+
+function openNav() {
+    openMenu();
+
+    currentFocus = document.activeElement;
+    currentIndex = focusArray.indexOf(currentFocus);
+    arrayLast = focusArray.length - 1;
+    focusState = true;
+};
+
+function closeNav() {
+    focusState = false;
+    closeMenu();
+};
+
+window.addEventListener('keydown', (event) => {
+    if (focusState) {
+        let keyPress = event.key;
+
+        if (keyPress === 'ArrowDown' || (!event.shiftKey && keyPress === 'Tab')) {
+            event.preventDefault();
+
+            if (currentIndex !== arrayLast) {
+                currentIndex = currentIndex + 1;
+                focusArray[currentIndex].focus();
+            } else {
+                currentIndex = 0;
+                focusArray[0].focus();
+            }
+        }
+
+        if (keyPress === 'ArrowUp' || (event.shiftKey && keyPress === 'Tab')) {
+            event.preventDefault();
+
+            if (currentIndex !== 0) {
+                currentIndex = currentIndex - 1;
+                focusArray[currentIndex].focus();
+            } else {
+                currentIndex = arrayLast;
+                focusArray[arrayLast].focus();
+            }
+        }
+
+        if (keyPress === 'Escape') {
+            event.preventDefault();
+            closeNav();
+        }
+
+        if (keyPress === 'Enter') {
+            closeNav();
+        }
+    }
+});
+
+
+
 
