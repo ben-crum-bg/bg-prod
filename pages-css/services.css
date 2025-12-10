@@ -154,6 +154,7 @@
 }
 
 .services-cards--bubbles .card__img {
+    object-fit: cover;
     max-height: 16rem;
     aspect-ratio: 1 / 1;
     border-radius: 2.5rem;
