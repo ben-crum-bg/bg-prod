@@ -28,16 +28,16 @@ function openMenu() {
     navLinks.style.display = 'flex';
 
     // Toggles to mobile navbar styling
-    nav.classList.toggle('mobile-nav');
+    nav.classList.add('mobile-nav');
 
     // Swaps buttons
     navOpen.style.display = 'none';
     navClose.style.display = 'inline';
 
     // Backdrop styling
-    nav.classList.toggle('backdrop-focus');
+    nav.classList.add('backdrop-focus');
     backdrop.style.display = 'inline';
-    header.classList.toggle('backdrop-focus');
+    header.classList.add('backdrop-focus');
 
     // Focuses Close button
     button.focus();
@@ -51,7 +51,7 @@ function closeMenu() {
     navLinks.style.display = 'none';
 
     // Toggles to mobile navbar styling
-    nav.classList.toggle('mobile-nav');
+    nav.classList.remove('mobile-nav');
 
     // Swaps buttons
     navOpen.style.display = 'inline';
@@ -62,9 +62,9 @@ function closeMenu() {
     navLinks.removeAttribute('style');
 
     // Backdrop styling
-    nav.classList.toggle('backdrop-focus');
+    nav.classList.remove('backdrop-focus');
     backdrop.style.display = 'none';
-    header.classList.toggle('backdrop-focus');
+    header.classList.remove('backdrop-focus');
 }
 
 const focusArray = Array.from(navLinks.querySelectorAll('a'));
