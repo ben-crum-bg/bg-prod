@@ -188,6 +188,8 @@ a {
 }
 
 .logo-svg {
+    width: 100%;
+    max-width: 31rem;
     padding-block: 2rem;
 }
 
@@ -390,6 +392,14 @@ h2 {
 @media (max-width: 600px) {
     .header {
         padding-inline: 1rem;
+    }
+
+    .logo-svg {
+        /* max-width: 20rem; */
+    }
+
+    #nav-open {
+        margin-inline-start: 1rem;
     }
 
     #nav-close {
