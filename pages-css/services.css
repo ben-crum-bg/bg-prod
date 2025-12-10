@@ -54,7 +54,14 @@
     }
 }
 
+.service-callout-container {
+    display: flex;
+    justify-content: center;
+}
+
 .service-callout {
+    width: 100%;
+    max-width: 1920px;
     margin-bottom: 3rem;
     padding-block: 2rem;
     text-align: center;
