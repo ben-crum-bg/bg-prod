@@ -187,6 +187,10 @@ a {
     font-weight: 700;
 }
 
+.logo-svg {
+    padding-block: 2rem;
+}
+
 header {
     border-bottom: 1px solid #D2D2D2;
     background: #FBFDFF;
@@ -285,6 +289,10 @@ h2 {
 
 /* Mobile styling */
 @media (max-width: 1130px) {
+    .logo-svg {
+        padding-block: 1rem;
+    }
+
     nav {
         display: flex;
         flex-direction: column;
