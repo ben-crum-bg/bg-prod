@@ -148,8 +148,14 @@ a {
 }
 
 /* Start Header */
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
 .header {
     margin-bottom: 2rem;
+    width: 100%;
     max-width: var(--max-width-900);
     padding-inline: 2rem;
     display: flex;
