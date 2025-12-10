@@ -14,6 +14,7 @@ const navOpen = document.getElementById('nav-open');
 const navClose = document.getElementById('nav-close');
 const navLinks = document.getElementById('nav-links');
 const nav = document.getElementById('nav');
+const backdrop = document.getElementById('backdrop');
 
 navOpen.addEventListener('click', openNav);
 navClose.addEventListener('click', closeNav);
@@ -34,6 +35,11 @@ function openNav() {
     // Swaps buttons
     navOpen.style.display = 'none';
     navClose.style.display = 'inline';
+
+    // Backdrop styling
+    nav.classList.toggle('backdrop-focus');
+    backdrop.style.display = 'inline';
+    header.classList.toggle('backdrop-focus');
 
     // Focuses Close button
     button.focus();
@@ -57,6 +63,11 @@ function closeNav() {
     // Removes inline styling so media queries can work
     navOpen.removeAttribute('style');
     navLinks.removeAttribute('style');
+
+    // Backdrop styling
+    nav.classList.toggle('backdrop-focus');
+    backdrop.style.display = 'none';
+    header.classList.toggle('backdrop-focus');
 
     // Testing
     // console.log('Close Navbar');
