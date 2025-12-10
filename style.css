@@ -336,6 +336,7 @@ h2 {
 
         padding-block: .75rem;
         padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
     }
 
     .mobile-nav-link-container a {
@@ -881,6 +882,12 @@ div:has(.hero__link) {
 @media (max-width: 490px) {
     .footer__links {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1130px) {
+    .footer li {
+        padding: .375rem;
     }
 }
 
