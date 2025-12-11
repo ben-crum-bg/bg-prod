@@ -203,6 +203,7 @@ header {
 #nav-close {
     border: none;
     background: none;
+    touch-action: none;
 }
 
 #nav-open:focus-visible,
