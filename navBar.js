@@ -5,16 +5,17 @@ const closeButton = document.getElementById('nav-close');
 const linkList = document.getElementById('nav-links');
 const backdrop = document.getElementById('backdrop');
 
+// Opening nav and starting related services
 openButton.addEventListener('click', openNav);
-closeButton.addEventListener('click', closeNav);
 
-window.addEventListener('resize', function () {
-    if (closeButton.style.display === ('inline')) {
-        closeNav();
-    }
-});
+function openNav() {
+    openMenu();
 
-backdrop.addEventListener('click', closeNav);
+    currentFocus = document.activeElement;
+    currentIndex = focusArray.indexOf(currentFocus);
+    arrayLast = focusArray.length - 1;
+    focusState = true;
+};
 
 function openMenu() {
     // Opens navbar
@@ -34,8 +35,24 @@ function openMenu() {
     header.classList.add('backdrop-focus');
 
     // Focuses Close button
+
     closeButton.focus();
 }
+
+// Closing nav and stopping related services
+window.addEventListener('resize', function () {
+    if (closeButton.style.display === ('inline')) {
+        closeNav();
+    }
+});
+
+closeButton.addEventListener('click', closeNav);
+backdrop.addEventListener('click', closeNav);
+
+function closeNav() {
+    focusState = false;
+    closeMenu();
+};
 
 function closeMenu() {
     // Closes navbar
@@ -59,6 +76,7 @@ function closeMenu() {
     header.classList.remove('backdrop-focus');
 }
 
+// Focus Trap
 const focusArray = Array.from(linkList.querySelectorAll('a'));
 focusArray.unshift(closeButton);
 
@@ -66,20 +84,6 @@ let currentFocus;
 let currentIndex;
 let focusState = false;
 let arrayLast;
-
-function openNav() {
-    openMenu();
-
-    currentFocus = document.activeElement;
-    currentIndex = focusArray.indexOf(currentFocus);
-    arrayLast = focusArray.length - 1;
-    focusState = true;
-};
-
-function closeNav() {
-    focusState = false;
-    closeMenu();
-};
 
 window.addEventListener('keydown', (event) => {
     if (focusState) {

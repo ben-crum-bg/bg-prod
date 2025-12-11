@@ -684,7 +684,7 @@ div:has(.hero__link) {
     margin-inline: 3rem;
     padding-inline: 2rem;
 
-    background-image: url(./assets/our-team-bg.png);
+    background-image: url(./assets/home-page/our-team-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
