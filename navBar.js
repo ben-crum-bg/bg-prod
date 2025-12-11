@@ -17,14 +17,12 @@ window.addEventListener('resize', function () {
 backdrop.addEventListener('click', closeNav);
 
 function openMenu() {
-    console.log(header.offsetHeight)
     // Opens navbar
     linkList.style.display = 'flex';
 
     // Toggles to mobile navbar styling
     linkList.classList.add('mobile-nav');
     linkList.style.top = header.offsetHeight + 'px';
-    console.log(linkList.style.top);
 
     // Swaps buttons
     openButton.style.display = 'none';
