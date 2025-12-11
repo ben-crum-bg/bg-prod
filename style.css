@@ -309,8 +309,13 @@ h2 {
         right: 0;
     }
 
+    #nav-open {
+        display: inline;
+    }
+
     #nav-close {
-        margin-right: 2rem;
+        display: none;
+
         align-self: flex-end;
     }
 
@@ -376,14 +381,6 @@ h2 {
         border-bottom: solid 1px #D2D2D2;
     }
 
-    #nav-open {
-        display: inline;
-    }
-
-    #nav-close {
-        display: none;
-    }
-
     #nav-links {
         display: none;
     }
@@ -394,16 +391,9 @@ h2 {
         padding-inline: 1rem;
     }
 
-    .logo-svg {
-        /* max-width: 20rem; */
-    }
-
-    #nav-open {
-        margin-inline-start: 1rem;
-    }
-
+    #nav-open,
     #nav-close {
-        margin-inline: 1rem;
+        margin-inline-start: 1rem;
     }
 }
 
