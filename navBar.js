@@ -4,9 +4,11 @@ const openButton = document.getElementById('nav-open');
 const closeButton = document.getElementById('nav-close');
 const linkList = document.getElementById('nav-links');
 const backdrop = document.getElementById('backdrop');
+let keyboardWasPressed = false;
 
-// Opening nav and starting related services
+// Open nav
 openButton.addEventListener('click', openNav);
+openButton.addEventListener('keydown', () => { keyboardWasPressed = true; })
 
 function openNav() {
     openMenu();
@@ -35,11 +37,12 @@ function openMenu() {
     header.classList.add('backdrop-focus');
 
     // Focuses Close button
-
-    closeButton.focus();
+    if (keyboardWasPressed) {
+        closeButton.focus();
+    }
 }
 
-// Closing nav and stopping related services
+// Close nav
 window.addEventListener('resize', function () {
     if (closeButton.style.display === ('inline')) {
         closeNav();
