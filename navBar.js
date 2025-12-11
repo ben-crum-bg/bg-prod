@@ -24,16 +24,17 @@ function openMenu() {
     linkList.style.display = 'flex';
 
     // Toggles to mobile navbar styling
-    linkList.classList.add('mobile-nav');
     linkList.style.top = header.offsetHeight + 'px';
+    linkList.style.transform = 'translateX(-30rem)';
 
     // Swaps buttons
     openButton.style.display = 'none';
     closeButton.style.display = 'inline';
 
     // Backdrop styling
-    nav.classList.add('backdrop-focus');
     backdrop.style.display = 'inline';
+    backdrop.style.opacity = '.5';
+    nav.classList.add('backdrop-focus');
     header.classList.add('backdrop-focus');
 
     // Focuses Close button
@@ -62,9 +63,6 @@ function closeMenu() {
     linkList.style.display = 'none';
     linkList.style.top = header.offsetHeight + 'px';
 
-    // Toggles to mobile navbar styling
-    nav.classList.remove('mobile-nav');
-
     // Swaps buttons
     openButton.style.display = 'inline';
     closeButton.style.display = 'none';
@@ -74,8 +72,8 @@ function closeMenu() {
     linkList.removeAttribute('style');
 
     // Backdrop styling
-    nav.classList.remove('backdrop-focus');
     backdrop.style.display = 'none';
+    nav.classList.remove('backdrop-focus');
     header.classList.remove('backdrop-focus');
 }
 
