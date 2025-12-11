@@ -8,7 +8,7 @@
 }
 
 .img-hero {
-    background: linear-gradient(rgba(0, 0, 0, .4)), url(../assets/services-hero.png);
+    background: linear-gradient(rgba(0, 0, 0, .4)), url(../assets/services-page/services-hero.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
