@@ -1,24 +1,15 @@
 const header = document.querySelector('header');
-const button = document.getElementById('nav-close');
-const navOpen = document.getElementById('nav-open');
-const navClose = document.getElementById('nav-close');
-const navLinks = document.getElementById('nav-links');
 const nav = document.getElementById('nav');
+const openButton = document.getElementById('nav-open');
+const closeButton = document.getElementById('nav-close');
+const linkList = document.getElementById('nav-links');
 const backdrop = document.getElementById('backdrop');
-const navContinent = document.querySelector('.continent');
 
-resizeMobileNav();
-
-function resizeMobileNav() {
-    button.style.height = header.offsetHeight + 'px';
-}
-
-navOpen.addEventListener('click', openNav);
-navClose.addEventListener('click', closeNav);
-
+openButton.addEventListener('click', openNav);
+closeButton.addEventListener('click', closeNav);
 
 window.addEventListener('resize', function () {
-    if (navClose.style.display === ('inline')) {
+    if (closeButton.style.display === ('inline')) {
         closeNav();
     }
 });
@@ -26,15 +17,18 @@ window.addEventListener('resize', function () {
 backdrop.addEventListener('click', closeNav);
 
 function openMenu() {
+    console.log(header.offsetHeight)
     // Opens navbar
-    navLinks.style.display = 'flex';
+    linkList.style.display = 'flex';
 
     // Toggles to mobile navbar styling
-    nav.classList.add('mobile-nav');
+    linkList.classList.add('mobile-nav');
+    linkList.style.top = header.offsetHeight + 'px';
+    console.log(linkList.style.top);
 
     // Swaps buttons
-    navOpen.style.display = 'none';
-    navClose.style.display = 'inline';
+    openButton.style.display = 'none';
+    closeButton.style.display = 'inline';
 
     // Backdrop styling
     nav.classList.add('backdrop-focus');
@@ -42,26 +36,24 @@ function openMenu() {
     header.classList.add('backdrop-focus');
 
     // Focuses Close button
-    button.focus();
-
-    // Resizes top of mobile nav to match header height
-    resizeMobileNav();
+    closeButton.focus();
 }
 
 function closeMenu() {
     // Closes navbar
-    navLinks.style.display = 'none';
+    linkList.style.display = 'none';
+    linkList.style.top = header.offsetHeight + 'px';
 
     // Toggles to mobile navbar styling
     nav.classList.remove('mobile-nav');
 
     // Swaps buttons
-    navOpen.style.display = 'inline';
-    navClose.style.display = 'none';
+    openButton.style.display = 'inline';
+    closeButton.style.display = 'none';
 
     // Removes inline styling so media queries can work
-    navOpen.removeAttribute('style');
-    navLinks.removeAttribute('style');
+    openButton.removeAttribute('style');
+    linkList.removeAttribute('style');
 
     // Backdrop styling
     nav.classList.remove('backdrop-focus');
@@ -69,8 +61,8 @@ function closeMenu() {
     header.classList.remove('backdrop-focus');
 }
 
-const focusArray = Array.from(navLinks.querySelectorAll('a'));
-focusArray.unshift(navClose);
+const focusArray = Array.from(linkList.querySelectorAll('a'));
+focusArray.unshift(closeButton);
 
 let currentFocus;
 let currentIndex;
