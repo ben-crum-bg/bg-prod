@@ -159,7 +159,7 @@ a {
     opacity: 0;
     backdrop-filter: blur(3px);
 
-    transition: opacity 3s ease-in-out;
+    transition: opacity .3s ease-out;
 }
 
 .backdrop-focus {
@@ -313,7 +313,7 @@ header {
         background-color: white;
         border: solid 1px #D2D2D2;
 
-        transition: transform .3s ease-in-out;
+        transition: transform .3s linear;
     }
 
     #nav-open {

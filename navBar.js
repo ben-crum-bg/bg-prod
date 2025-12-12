@@ -22,18 +22,23 @@ function openNav() {
 function openMenu() {
     // Opens navbar
     linkList.style.display = 'flex';
+    backdrop.style.display = 'inline';
 
     // Toggles to mobile navbar styling
     linkList.style.top = header.offsetHeight + 'px';
     linkList.style.transform = 'translateX(-30rem)';
 
+    linkList.addEventListener('transitionstart', () => {
+        backdrop.style.opacity = '.5';
+    },
+        {
+            once: true
+        });
+
     // Swaps buttons
     openButton.style.display = 'none';
     closeButton.style.display = 'inline';
 
-    // Backdrop styling
-    backdrop.style.display = 'inline';
-    backdrop.style.opacity = '.5';
     nav.classList.add('backdrop-focus');
     header.classList.add('backdrop-focus');
 
@@ -62,6 +67,7 @@ function closeMenu() {
     // Closes navbar
     linkList.style.top = header.offsetHeight + 'px';
     linkList.style.transform = 'translateX(30rem)';
+    backdrop.style.opacity = '0';
 
     linkList.addEventListener('transitionstart', () => {
         // Swaps buttons
@@ -74,11 +80,11 @@ function closeMenu() {
 
     // Pauses code until after the link list is done transitioning
     linkList.addEventListener('transitionend', () => {
-        linkList.style.display = 'none';
-
         backdrop.style.display = 'none';
         nav.classList.remove('backdrop-focus');
         header.classList.remove('backdrop-focus');
+
+        linkList.style.display = 'none';
 
         // Removes inline styling so media queries can work
         openButton.removeAttribute('style');
