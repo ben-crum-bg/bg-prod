@@ -68,13 +68,18 @@ function closeMenu() {
     nav.classList.remove('backdrop-focus');
     header.classList.remove('backdrop-focus');
 
-    // Pauses code until after the link list is done transitioning
-    linkList.addEventListener('transitionend', () => {
-        linkList.style.display = 'none';
-
+    linkList.addEventListener('transitionstart', () => {
         // Swaps buttons
         openButton.style.display = 'inline';
         closeButton.style.display = 'none';
+    },
+        {
+            once: true
+        });
+
+    // Pauses code until after the link list is done transitioning
+    linkList.addEventListener('transitionend', () => {
+        linkList.style.display = 'none';
 
         // Removes inline styling so media queries can work
         openButton.removeAttribute('style');
