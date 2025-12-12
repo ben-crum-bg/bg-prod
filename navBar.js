@@ -25,7 +25,7 @@ function openMenu() {
 
     // Toggles to mobile navbar styling
     linkList.style.top = header.offsetHeight + 'px';
-    linkList.style.transform = 'translateX(-15rem)';
+    linkList.style.transform = 'translateX(-30rem)';
 
     // Swaps buttons
     openButton.style.display = 'none';
@@ -60,21 +60,29 @@ function closeNav() {
 
 function closeMenu() {
     // Closes navbar
-    linkList.style.display = 'none';
     linkList.style.top = header.offsetHeight + 'px';
-
-    // Swaps buttons
-    openButton.style.display = 'inline';
-    closeButton.style.display = 'none';
-
-    // Removes inline styling so media queries can work
-    openButton.removeAttribute('style');
-    linkList.removeAttribute('style');
+    linkList.style.transform = 'translateX(30rem)';
 
     // Backdrop styling
     backdrop.style.display = 'none';
     nav.classList.remove('backdrop-focus');
     header.classList.remove('backdrop-focus');
+
+    // Pauses code until after the link list is done transitioning
+    linkList.addEventListener('transitionend', () => {
+        linkList.style.display = 'none';
+
+        // Swaps buttons
+        openButton.style.display = 'inline';
+        closeButton.style.display = 'none';
+
+        // Removes inline styling so media queries can work
+        openButton.removeAttribute('style');
+        linkList.removeAttribute('style');
+    },
+        {
+            once: true
+        });
 }
 
 // Focus Trap
