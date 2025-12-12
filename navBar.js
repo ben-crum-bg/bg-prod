@@ -1,64 +1,148 @@
-// Matches mobile navbar offset to height of header
 const header = document.querySelector('header');
-const button = document.getElementById('nav-close');
+const nav = document.getElementById('nav');
+const openButton = document.getElementById('nav-open');
+const closeButton = document.getElementById('nav-close');
+const linkList = document.getElementById('nav-links');
+const backdrop = document.getElementById('backdrop');
+let keyboardWasPressed = false;
 
-resizeMobileNav();
+// Open nav
+openButton.addEventListener('click', openNav);
+openButton.addEventListener('keydown', () => { keyboardWasPressed = true; })
 
-function resizeMobileNav() {
-    button.style.height = header.offsetHeight + 'px';
+function openNav() {
+    openMenu();
+
+    currentFocus = document.activeElement;
+    currentIndex = focusArray.indexOf(currentFocus);
+    arrayLast = focusArray.length - 1;
+    focusState = true;
+};
+
+function openMenu() {
+    // Opens navbar
+    linkList.style.display = 'flex';
+    backdrop.style.display = 'inline';
+
+    // Toggles to mobile navbar styling
+    linkList.style.top = header.offsetHeight + 'px';
+    linkList.style.transform = 'translateX(-30rem)';
+
+    linkList.addEventListener('transitionstart', () => {
+        backdrop.style.opacity = '.5';
+    },
+        {
+            once: true
+        });
+
+    // Swaps buttons
+    openButton.style.display = 'none';
+    closeButton.style.display = 'inline';
+
+    nav.classList.add('backdrop-focus');
+    header.classList.add('backdrop-focus');
+
+    // Focuses Close button
+    if (keyboardWasPressed) {
+        closeButton.focus();
+    }
 }
 
-
-// Toggles navbar on button click
-const navOpen = document.getElementById('nav-open');
-const navClose = document.getElementById('nav-close');
-const navLinks = document.getElementById('nav-links');
-const nav = document.getElementById('nav');
-
-navOpen.addEventListener('click', openNav);
-navClose.addEventListener('click', closeNav);
-
+// Close nav
 window.addEventListener('resize', function () {
-    if (navClose.style.display === ('inline')) {
+    if (closeButton.style.display === ('inline')) {
         closeNav();
     }
 });
 
-function openNav() {
-    // Opens navbar
-    navLinks.style.display = 'flex';
-
-    // Toggles to mobile navbar styling
-    nav.classList.toggle('mobile-nav');
-
-    // Swaps buttons
-    navOpen.style.display = 'none';
-    navClose.style.display = 'inline';
-
-    // Focuses Close button
-    button.focus();
-
-    // Testing
-    // console.log('Open Navbar');
-    resizeMobileNav();
-}
+closeButton.addEventListener('click', closeNav);
+backdrop.addEventListener('click', closeNav);
 
 function closeNav() {
+    focusState = false;
+    closeMenu();
+};
+
+function closeMenu() {
     // Closes navbar
-    navLinks.style.display = 'none';
+    linkList.style.top = header.offsetHeight + 'px';
+    linkList.style.transform = 'translateX(30rem)';
+    backdrop.style.opacity = '0';
 
-    // Toggles to mobile navbar styling
-    nav.classList.toggle('mobile-nav');
+    linkList.addEventListener('transitionstart', () => {
+        // Swaps buttons
+        openButton.style.display = 'inline';
+        closeButton.style.display = 'none';
+    },
+        {
+            once: true
+        });
 
-    // Swaps buttons
-    navOpen.style.display = 'inline';
-    navClose.style.display = 'none';
+    // Pauses code until after the link list is done transitioning
+    linkList.addEventListener('transitionend', () => {
+        backdrop.style.display = 'none';
+        nav.classList.remove('backdrop-focus');
+        header.classList.remove('backdrop-focus');
 
-    // Removes inline styling so media queries can work
-    navOpen.removeAttribute('style');
-    navLinks.removeAttribute('style');
+        linkList.style.display = 'none';
 
-    // Testing
-    // console.log('Close Navbar');
+        // Removes inline styling so media queries can work
+        openButton.removeAttribute('style');
+        linkList.removeAttribute('style');
+    },
+        {
+            once: true
+        });
 }
+
+// Focus Trap
+const focusArray = Array.from(linkList.querySelectorAll('a'));
+focusArray.unshift(closeButton);
+
+let currentFocus;
+let currentIndex;
+let focusState = false;
+let arrayLast;
+
+window.addEventListener('keydown', (event) => {
+    if (focusState) {
+        let keyPress = event.key;
+
+        if (keyPress === 'ArrowDown' || (!event.shiftKey && keyPress === 'Tab')) {
+            event.preventDefault();
+
+            if (currentIndex !== arrayLast) {
+                currentIndex = currentIndex + 1;
+                focusArray[currentIndex].focus();
+            } else {
+                currentIndex = 0;
+                focusArray[0].focus();
+            }
+        }
+
+        if (keyPress === 'ArrowUp' || (event.shiftKey && keyPress === 'Tab')) {
+            event.preventDefault();
+
+            if (currentIndex !== 0) {
+                currentIndex = currentIndex - 1;
+                focusArray[currentIndex].focus();
+            } else {
+                currentIndex = arrayLast;
+                focusArray[arrayLast].focus();
+            }
+        }
+
+        if (keyPress === 'Escape') {
+            event.preventDefault();
+            closeNav();
+        }
+
+        if (keyPress === 'Enter') {
+            closeNav();
+        }
+    }
+});
+
+
+
 

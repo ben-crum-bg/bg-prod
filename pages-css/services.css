@@ -2,13 +2,19 @@
     margin-bottom: 0;
 }
 
+.img-hero-container {
+    display: flex;
+    justify-content: center;
+}
+
 .img-hero {
-    background: linear-gradient(rgba(0, 0, 0, .4)), url(../assets/services-hero.png);
+    background: linear-gradient(rgba(0, 0, 0, .4)), url(../assets/services-page/services-hero.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     min-height: 40rem;
+    max-width: 1920px;
     width: 100%;
     padding-inline: 3rem;
 
@@ -48,7 +54,14 @@
     }
 }
 
+.service-callout-container {
+    display: flex;
+    justify-content: center;
+}
+
 .service-callout {
+    width: 100%;
+    max-width: 1920px;
     margin-bottom: 3rem;
     padding-block: 2rem;
     text-align: center;
@@ -154,6 +167,7 @@
 }
 
 .services-cards--bubbles .card__img {
+    object-fit: cover;
     max-height: 16rem;
     aspect-ratio: 1 / 1;
     border-radius: 2.5rem;
