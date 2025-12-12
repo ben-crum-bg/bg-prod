@@ -4,9 +4,11 @@ const openButton = document.getElementById('nav-open');
 const closeButton = document.getElementById('nav-close');
 const linkList = document.getElementById('nav-links');
 const backdrop = document.getElementById('backdrop');
+let keyboardWasPressed = false;
 
-// Opening nav and starting related services
+// Open nav
 openButton.addEventListener('click', openNav);
+openButton.addEventListener('keydown', () => { keyboardWasPressed = true; })
 
 function openNav() {
     openMenu();
@@ -22,24 +24,26 @@ function openMenu() {
     linkList.style.display = 'flex';
 
     // Toggles to mobile navbar styling
-    linkList.classList.add('mobile-nav');
     linkList.style.top = header.offsetHeight + 'px';
+    linkList.style.transform = 'translateX(-30rem)';
 
     // Swaps buttons
     openButton.style.display = 'none';
     closeButton.style.display = 'inline';
 
     // Backdrop styling
-    nav.classList.add('backdrop-focus');
     backdrop.style.display = 'inline';
+    backdrop.style.opacity = '.5';
+    nav.classList.add('backdrop-focus');
     header.classList.add('backdrop-focus');
 
     // Focuses Close button
-
-    closeButton.focus();
+    if (keyboardWasPressed) {
+        closeButton.focus();
+    }
 }
 
-// Closing nav and stopping related services
+// Close nav
 window.addEventListener('resize', function () {
     if (closeButton.style.display === ('inline')) {
         closeNav();
@@ -59,9 +63,6 @@ function closeMenu() {
     linkList.style.display = 'none';
     linkList.style.top = header.offsetHeight + 'px';
 
-    // Toggles to mobile navbar styling
-    nav.classList.remove('mobile-nav');
-
     // Swaps buttons
     openButton.style.display = 'inline';
     closeButton.style.display = 'none';
@@ -71,8 +72,8 @@ function closeMenu() {
     linkList.removeAttribute('style');
 
     // Backdrop styling
-    nav.classList.remove('backdrop-focus');
     backdrop.style.display = 'none';
+    nav.classList.remove('backdrop-focus');
     header.classList.remove('backdrop-focus');
 }
 
