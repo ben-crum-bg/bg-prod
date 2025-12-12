@@ -206,6 +206,7 @@ header {
     border: none;
     background: none;
     touch-action: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #nav-open:focus-visible,
