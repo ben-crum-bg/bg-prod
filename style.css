@@ -298,16 +298,11 @@ header {
     }
 
     .nav-links {
-        /* overflow: hidden;
-        position: absolute;
-        top: 0;
-        width: 0;
-        right: 0;
-         */
         position: absolute;
         z-index: 1000;
-        width: 100%;
+        width: 80vw;
         top: 0;
+        right: -15rem;
 
 
         display: none;

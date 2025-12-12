@@ -25,7 +25,7 @@ function openMenu() {
 
     // Toggles to mobile navbar styling
     linkList.style.top = header.offsetHeight + 'px';
-    linkList.style.transform = 'translateX(-30rem)';
+    linkList.style.transform = 'translateX(-15rem)';
 
     // Swaps buttons
     openButton.style.display = 'none';
