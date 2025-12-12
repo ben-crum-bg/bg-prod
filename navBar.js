@@ -63,11 +63,6 @@ function closeMenu() {
     linkList.style.top = header.offsetHeight + 'px';
     linkList.style.transform = 'translateX(30rem)';
 
-    // Backdrop styling
-    backdrop.style.display = 'none';
-    nav.classList.remove('backdrop-focus');
-    header.classList.remove('backdrop-focus');
-
     linkList.addEventListener('transitionstart', () => {
         // Swaps buttons
         openButton.style.display = 'inline';
@@ -80,6 +75,10 @@ function closeMenu() {
     // Pauses code until after the link list is done transitioning
     linkList.addEventListener('transitionend', () => {
         linkList.style.display = 'none';
+
+        backdrop.style.display = 'none';
+        nav.classList.remove('backdrop-focus');
+        header.classList.remove('backdrop-focus');
 
         // Removes inline styling so media queries can work
         openButton.removeAttribute('style');
