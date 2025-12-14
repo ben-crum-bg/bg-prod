@@ -40,110 +40,90 @@
         <!-- Service callout -->
         <section class="service-callout-container">
             <div class="service-callout">
-                <h2 class="service-callout__title">Request one service <span class="accent-text-purple">OR</span> get
-                    them all<span class="accent-text-purple">!</span></h2>
+                <p>Web Development</p>
+                <hr>
+                <p>Photography</p>
+                <hr>
+                <p>Branded Merchandise</p>
             </div>
         </section>
 
         <!-- Services Cards Bubbles -->
         <section>
-            <div class="services-cards--bubbles">
-                <div>
-                    <div class="card">
-                        <div class="card__left">
-                            <h3 class="card__title">Web Development</h3>
-                            <p class="card__text">grow your business with a custom website from our expert designers.
-                            </p>
-                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
-                        </div>
-                        <div class="card__right">
-                            <img class="card__img" src="../assets//services-page/laptop.png" alt="">
-                        </div>
+            <div class="card-container" id="cardStyle-1">
+                <div class="card">
+                    <div class="img-col">
+                        <img src="../assets/services-page/laptop.png" alt="">
                     </div>
-                    <div class="svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
-                            <rect y="56" width="14" height="99" rx="7" transform="rotate(-90 0 56)" fill="#D60F84" />
-                            <rect x="42" width="14" height="99" rx="7" fill="#D60F84" />
-                            <rect x="44" y="2" width="10" height="95" rx="5" fill="#D60F84" />
-                            <rect x="2" y="54" width="10" height="95" rx="5" transform="rotate(-90 2 54)"
-                                fill="#D60F84" />
-                        </svg>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
-                            <rect y="56" width="14" height="99" rx="7" transform="rotate(-90 0 56)" fill="#D60F84" />
-                            <rect x="42" width="14" height="99" rx="7" fill="#D60F84" />
-                            <rect x="44" y="2" width="10" height="95" rx="5" fill="#D60F84" />
-                            <rect x="2" y="54" width="10" height="95" rx="5" transform="rotate(-90 2 54)"
-                                fill="#D60F84" />
-                        </svg>
-                    </div>
-                    <div class="card card--reversed">
-                        <div class="card__left">
-                            <h3 class="card__title">Photography</h3>
-                            <p class="card__text">Let our photographers capture your brand's essence. From product shots
-                                to lifestyle imagery, we deliver high-quality visuals.
-                            </p>
-                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
+                    <div class="content-col">
+                        <div class="flex-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="50" viewBox="0 0 54 50" fill="none">
+                                <path d="M3.375 5C3.375 3.67392 3.90837 2.40215 4.85777 1.46447C5.80718 0.526784 7.09484 0 8.4375 0H45.5625C46.9052 0 48.1928 0.526784 49.1422 1.46447C50.0916 2.40215 50.625 3.67392 50.625 5V28.3333C50.625 29.6594 50.0916 30.9312 49.1422 31.8689C48.1928 32.8065 46.9052 33.3333 45.5625 33.3333H27V30H45.5625C46.0101 30 46.4393 29.8244 46.7557 29.5118C47.0722 29.1993 47.25 28.7754 47.25 28.3333V5C47.25 4.55797 47.0722 4.13405 46.7557 3.82149C46.4393 3.50893 46.0101 3.33333 45.5625 3.33333H8.4375C7.98995 3.33333 7.56073 3.50893 7.24426 3.82149C6.92779 4.13405 6.75 4.55797 6.75 5V10H3.375V5ZM27 40H52.3125C52.7601 40 53.1893 39.8244 53.5057 39.5118C53.8222 39.1993 54 38.7754 54 38.3333C54 37.8913 53.8222 37.4674 53.5057 37.1548C53.1893 36.8423 52.7601 36.6667 52.3125 36.6667H27V40ZM10.125 40C9.67745 40 9.24823 40.1756 8.93176 40.4882C8.61529 40.8007 8.4375 41.2246 8.4375 41.6667C8.4375 42.1087 8.61529 42.5326 8.93176 42.8452C9.24823 43.1577 9.67745 43.3333 10.125 43.3333H13.5C13.9476 43.3333 14.3768 43.1577 14.6932 42.8452C15.0097 42.5326 15.1875 42.1087 15.1875 41.6667C15.1875 41.2246 15.0097 40.8007 14.6932 40.4882C14.3768 40.1756 13.9476 40 13.5 40H10.125ZM0 18.3333C0 17.0072 0.533369 15.7355 1.48277 14.7978C2.43217 13.8601 3.71984 13.3333 5.0625 13.3333H18.5625C19.9052 13.3333 21.1928 13.8601 22.1422 14.7978C23.0916 15.7355 23.625 17.0072 23.625 18.3333V45C23.625 46.3261 23.0916 47.5978 22.1422 48.5355C21.1928 49.4732 19.9052 50 18.5625 50H5.0625C3.71984 50 2.43217 49.4732 1.48277 48.5355C0.533369 47.5978 0 46.3261 0 45V18.3333ZM5.0625 16.6667C4.61495 16.6667 4.18573 16.8423 3.86926 17.1548C3.55279 17.4674 3.375 17.8913 3.375 18.3333V45C3.375 45.442 3.55279 45.866 3.86926 46.1785C4.18573 46.4911 4.61495 46.6667 5.0625 46.6667H18.5625C19.0101 46.6667 19.4393 46.4911 19.7557 46.1785C20.0722 45.866 20.25 45.442 20.25 45V18.3333C20.25 17.8913 20.0722 17.4674 19.7557 17.1548C19.4393 16.8423 19.0101 16.6667 18.5625 16.6667H5.0625Z" fill="#D60F84"/>
+                            </svg>
+                            <h3>Web Development</h3>
+                        </div>   
+                        <div>
+                            <p>We handle every aspect of your website.</p>
+                            <hr>
                         </div>
-                        <div class="card__right">
-                            <img class="card__img" src="../assets/services-page/camera.jpg" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div>
-                    <div class="card">
-                        <div class="card__left">
-                            <h3 class="card__title">Branded Merchandise</h3>
-                            <p class="card__text">From mugs to t-shirts, we'll help you create memorable products that
-                                resonate with your audience.
-                            </p>
-                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
-                        </div>
-                        <div class="card__right">
-                            <img class="card__img" src="../assets/services-page/merch.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
-                            <rect y="56" width="14" height="99" rx="7" transform="rotate(-90 0 56)" fill="#D60F84" />
-                            <rect x="42" width="14" height="99" rx="7" fill="#D60F84" />
-                            <rect x="44" y="2" width="10" height="95" rx="5" fill="#D60F84" />
-                            <rect x="2" y="54" width="10" height="95" rx="5" transform="rotate(-90 2 54)"
-                                fill="#D60F84" />
-                        </svg>
+                        <ul>
+                            <li>UI/UX Design</li>
+                            <li>End to End Code</li>
+                            <li>SEO & Creative Copywriting</li>
+                            <li>Accessibility Optimization</li>
+                        </ul>
+                        <!-- <a href="#">See More</a> -->
                     </div>
                 </div>
 
-                <div>
+                <div class="card reversed">
+                    <div class="content-col">
+                        <div class="flex-row">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none">
+                                <path d="M24.3947 18.3439H48.6275C47.3418 14.8832 45.2895 11.8249 42.4707 9.169C39.6538 6.51507 36.4404 4.73467 32.8306 3.82778L24.3947 18.3439ZM18.2997 24.2328L30.5339 3.23889C29.9941 3.14074 29.3227 3.06713 28.5199 3.01805C27.717 2.96898 27.0437 2.94444 26.5 2.94444C23.2611 2.94444 20.2431 3.55787 17.4458 4.78472C14.6486 6.01157 12.1704 7.65555 10.0111 9.71666L18.2997 24.2328ZM3.68057 32.3889H20.405L8.4064 11.5069C6.68292 13.6308 5.34222 15.9451 4.38429 18.4499C3.42637 20.9546 2.94642 23.638 2.94446 26.5C2.94446 27.5305 3.00629 28.5248 3.12996 29.4827C3.25363 30.4406 3.43716 31.4094 3.68057 32.3889ZM20.2843 49.1722L28.6848 34.6561H4.36957C5.65727 38.1168 7.72918 41.1751 10.5853 43.831C13.4414 46.4869 16.6754 48.2673 20.2872 49.1722M26.5 50.0555C29.7389 50.0555 32.757 49.4421 35.5542 48.2153C38.3514 46.9884 40.8296 45.3444 42.9889 43.2833L34.7003 28.7672L22.581 49.6492C23.1208 49.7846 23.7617 49.8867 24.5037 49.9554C25.2457 50.0241 25.9111 50.0575 26.5 50.0555ZM44.5966 41.4931C46.1669 39.4811 47.4694 37.1667 48.5038 34.5501C49.5383 31.9335 50.0556 29.2501 50.0556 26.5C50.0556 25.4694 49.9947 24.4762 49.873 23.5202C49.7513 22.5643 49.5668 21.5945 49.3194 20.6111H32.595L44.5966 41.4931ZM26.5 53C22.8528 53 19.4176 52.3031 16.1945 50.9094C12.9713 49.5138 10.1642 47.6195 7.77335 45.2267C5.38246 42.8338 3.4882 40.0268 2.09057 36.8055C0.692942 33.5843 -0.00390943 30.1491 1.64955e-05 26.5C1.64955e-05 22.841 0.696868 19.4029 2.09057 16.1856C3.48624 12.9663 5.3805 10.1623 7.77335 7.77333C10.1662 5.38441 12.9732 3.49015 16.1945 2.09055C19.4176 0.696852 22.8528 0 26.5 0C30.159 0 33.5971 0.696852 36.8144 2.09055C40.0337 3.48622 42.8387 5.38048 45.2296 7.77333C47.6205 10.1662 49.5138 12.9703 50.9094 16.1856C52.3032 19.4049 53 22.843 53 26.5C53 30.1472 52.3032 33.5824 50.9094 36.8055C49.5138 40.0287 47.6195 42.8358 45.2267 45.2267C42.8338 47.6175 40.0297 49.5118 36.8144 50.9094C33.5991 52.3071 30.1609 53.0039 26.5 53Z" fill="#D60F84"/>
+                            </svg>
+                            <h3>Photography</h3>
+                        </div>   
+                        <div>
+                            <p>Showcase your brand with unforgettable imagery.</p>
+                            <hr>
+                        </div>
+                        <ul>
+                            <li>Portraits</li>
+                            <li>Product Shots </li>
+                            <li>Lifestyle photos</li>
+                            <li>workspace Photos</li>
+                        </ul>
+                        <!-- <a href="#">See More</a> -->
+                    </div>
+                    <div class="img-col">
+                        <img src="../assets/services-page/camera.png" alt="">
+                    </div>
+                </div>
 
-                    <div class="svg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
-                            <rect y="56" width="14" height="99" rx="7" transform="rotate(-90 0 56)" fill="#D60F84" />
-                            <rect x="42" width="14" height="99" rx="7" fill="#D60F84" />
-                            <rect x="44" y="2" width="10" height="95" rx="5" fill="#D60F84" />
-                            <rect x="2" y="54" width="10" height="95" rx="5" transform="rotate(-90 2 54)"
-                                fill="#D60F84" />
+                <div class="card ">
+                    <div class="img-col">
+                        <img src="../assets/services-page/yourbrandtshirt.png" alt="">
+                    </div>
+                    <div class="content-col">
+                        <div class="flex-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="47" viewBox="0 0 62 47" fill="none">
+                            <path d="M60.431 7.33864L47.4867 0.125163C47.3402 0.0433836 47.176 0.000354791 47.0091 0H39.008C38.7427 0 38.4883 0.107647 38.3008 0.299261C38.1132 0.490874 38.0078 0.750757 38.0078 1.02174C38.0078 2.91861 37.2702 4.7378 35.9573 6.07909C34.6444 7.42038 32.8636 8.17391 31.0069 8.17391C29.1501 8.17391 27.3694 7.42038 26.0564 6.07909C24.7435 4.7378 24.0059 2.91861 24.0059 1.02174C24.0059 0.750757 23.9005 0.490874 23.713 0.299261C23.5254 0.107647 23.271 0 23.0058 0H15.0046C14.8384 0.00156283 14.6751 0.0454594 14.5296 0.127717L1.58278 7.33864C0.890672 7.70807 0.370316 8.34294 0.13593 9.10391C-0.0984563 9.86487 -0.0277213 10.6898 0.332609 11.3975L5.15328 20.8001C5.41806 21.3096 5.81437 21.7355 6.29921 22.0313C6.78405 22.3271 7.33893 22.4817 7.90366 22.4783H14.0045V43.9348C14.0045 44.7477 14.3206 45.5274 14.8833 46.1022C15.446 46.6771 16.2092 47 17.0049 47H45.0088C45.8046 47 46.5677 46.6771 47.1304 46.1022C47.6931 45.5274 48.0092 44.7477 48.0092 43.9348V22.4783H54.0926C54.6573 22.4817 55.2122 22.3271 55.697 22.0313C56.1819 21.7355 56.5782 21.3096 56.843 20.8001L61.6636 11.3975C62.0253 10.6919 62.0986 9.86874 61.8676 9.10806C61.6366 8.34739 61.12 7.71117 60.431 7.33864ZM7.92116 20.4348C7.71837 20.4398 7.51808 20.3882 7.34184 20.2856C7.16561 20.183 7.02012 20.0332 6.92102 19.8524L2.11286 10.4498C2.05477 10.3351 2.01975 10.2097 2.00985 10.0809C1.99995 9.95211 2.01538 9.82262 2.05522 9.70003C2.09506 9.57744 2.15852 9.46423 2.24185 9.36708C2.32517 9.26993 2.42669 9.1908 2.54042 9.13435L14.0045 2.74337V20.4348H7.92116ZM46.0089 43.9348C46.0089 44.2058 45.9036 44.4656 45.716 44.6573C45.5285 44.8489 45.2741 44.9565 45.0088 44.9565H17.0049C16.7397 44.9565 16.4853 44.8489 16.2977 44.6573C16.1102 44.4656 16.0048 44.2058 16.0048 43.9348V2.04348H22.0606C22.3052 4.29273 23.353 6.37087 25.0036 7.88021C26.6542 9.38955 28.7916 10.2241 31.0069 10.2241C33.2221 10.2241 35.3595 9.38955 37.0101 7.88021C38.6608 6.37087 39.7086 4.29273 39.9531 2.04348H46.0089V43.9348ZM59.9009 10.4498L55.0827 19.8524C54.9836 20.0332 54.8381 20.183 54.6619 20.2856C54.4857 20.3882 54.2854 20.4398 54.0826 20.4348H48.0092V2.74337L59.4733 9.12924C59.5877 9.18566 59.6898 9.265 59.7736 9.36254C59.8573 9.46007 59.9211 9.57382 59.9609 9.69701C60.0008 9.8202 60.0161 9.95033 60.0057 10.0797C59.9954 10.209 59.9598 10.3349 59.9009 10.4498Z" fill="#D60F84"/>
                         </svg>
-                    </div>
-                    <div class="card card--reversed">
-                        <div class="card__left">
-                            <h3 class="card__title">Copywriting</h3>
-                            <p class="card__text">Let us craft compelling copy that captures attention and drives action
-                                for your brand.
-                            </p>
-                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
+                            <h3>Branded Merch</h3>
+                        </div>   
+                        <div>
+                            <p>Boost recognition with merch people love to wear.</p>
+                            <hr>
                         </div>
-                        <div class="card__right">
-                            <img class="card__img" src="../assets/services-page/personwlaptop.jpg" alt="">
-                        </div>
+                        <ul>
+                            <li>t-shirts </li>
+                            <li>Hats</li>
+                            <li>Bags</li>
+                            <li>Approns</li>
+                        </ul>
+                        <!-- <a href="#">See More</a> -->
                     </div>
-
                 </div>
             </div>
         </section>
