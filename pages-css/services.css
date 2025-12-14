@@ -186,25 +186,25 @@
   border: 1px solid var(--J---Third, #1d3d58);
   box-shadow: 0 2px 5px 0 #1d3d58;
   text-decoration: none;
+}
 
-  @media (max-width: 1060px) {
-    #cardStyle-1 .card {
-      margin-bottom: 2rem;
-      margin-inline: 2rem;
-      flex-direction: column;
-    }
+@media (max-width: 1060px) {
+  #cardStyle-1 .card {
+    margin-bottom: 2rem;
+    margin-inline: 2rem;
+    flex-direction: column;
+  }
 
-    #cardStyle-1 .card.reversed {
-      flex-direction: column-reverse;
-    }
+  #cardStyle-1 .card.reversed {
+    flex-direction: column-reverse;
+  }
 
-    #cardStyle-1 .img-col {
-      margin-bottom: 2rem;
-    }
+  #cardStyle-1 .img-col {
+    margin-bottom: 2rem;
+  }
 
-    #cardStyle-1 img {
-      max-height: 20rem;
-    }
+  #cardStyle-1 img {
+    max-height: 20rem;
   }
 }
 
