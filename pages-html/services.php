@@ -54,7 +54,7 @@
                             <h3 class="card__title">Web Development</h3>
                             <p class="card__text">grow your business with a custom website from our expert designers.
                             </p>
-                            <a class="card__link" href="../pages-html/contact-us.html">Reach Out</a>
+                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
                         </div>
                         <div class="card__right">
                             <img class="card__img" src="../assets//services-page/laptop.png" alt="">
@@ -87,7 +87,7 @@
                             <p class="card__text">Let our photographers capture your brand's essence. From product shots
                                 to lifestyle imagery, we deliver high-quality visuals.
                             </p>
-                            <a class="card__link" href="../pages-html/contact-us.html">Reach Out</a>
+                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
                         </div>
                         <div class="card__right">
                             <img class="card__img" src="../assets/services-page/camera.jpg" alt="">
@@ -103,7 +103,7 @@
                             <p class="card__text">From mugs to t-shirts, we'll help you create memorable products that
                                 resonate with your audience.
                             </p>
-                            <a class="card__link" href="../pages-html/contact-us.html">Reach Out</a>
+                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
                         </div>
                         <div class="card__right">
                             <img class="card__img" src="../assets/services-page/merch.jpg" alt="">
@@ -137,7 +137,7 @@
                             <p class="card__text">Let us craft compelling copy that captures attention and drives action
                                 for your brand.
                             </p>
-                            <a class="card__link" href="../pages-html/contact-us.html">Reach Out</a>
+                            <a class="card__link" href="../pages-html/contact-us.php">Reach Out</a>
                         </div>
                         <div class="card__right">
                             <img class="card__img" src="../assets/services-page/personwlaptop.jpg" alt="">
@@ -156,7 +156,7 @@
                     <h2>Work with us to get everything your brand needs.</h2>
                     <p>From custom web applications to branded swag, we provide end-to-end services, ensuring your brand
                         speaks with one voice.</p>
-                    <a href="../pages-html/contact-us.html">Reach Out</a>
+                    <a href="../pages-html/contact-us.php">Reach Out</a>
                 </div>
             </div>
         </section>
