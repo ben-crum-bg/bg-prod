@@ -35,9 +35,9 @@
             </div>
 
             <div class="hero__links">
-                <a class="hero__link" href="pages-html/contact-us.html">Contact<span
+                <a class="hero__link" href="pages-html/contact-us.php">Contact<span
                         class="accent-text-hidden">!</span></a>
-                <a class="hero__link" href="pages-html/services.html">Learn More<span
+                <a class="hero__link" href="pages-html/services.php">Learn More<span
                         class="accent-text-hidden">!</span></a>
             </div>
 
