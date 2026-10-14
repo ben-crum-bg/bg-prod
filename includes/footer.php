@@ -9,7 +9,7 @@
     </div>
     <div>
         <small class="footer__copyright">
-            Copyright © 2025 Brightglass Solutions, LLC. all rights reserved
+            Copyright © 2025 - 2026 Brightglass Solutions, LLC. all rights reserved
         </small>
     </div>
 </footer>
