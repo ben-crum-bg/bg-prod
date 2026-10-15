@@ -1,99 +1,227 @@
-.intro {
-    margin-inline: 3rem;
-    margin-bottom: 6rem;
+.header{
+    margin-bottom: 0;
+}
+
+.intro__container{
+    display: flex;
+    justify-content: center;
+}
+
+.intro{
+    background: linear-gradient(rgba(0, 0, 0, 0.4)),
+        url(../assets/aboutus-page/aboutus-hero2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+        
+    min-height: 20rem;
+    max-width: 1920px;
+    width: 100%;
+    padding-block-start: 3rem;
+    padding-block-end: 8rem;
+    padding-inline: 3rem;
+
+    display: grid;
+    align-content: center;
+    row-gap: 1rem;
+}
+
+.intro__header{
+    font-size: clamp(1rem, 0.915rem + 0.488vw, 1.5rem);
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.intro__subheader{
+    color: #fff;
+    font-size: clamp(1.15rem, 0.7125rem + 1.4vw, 1.5rem);
+    font-weight: 600;
+}
+
+.intro__body{
+    color: #fff;
+    font-size: clamp(1.15rem, 0.7125rem + 1.4vw, 1.5rem);
+    font-weight: 100;
+    line-height: 1.8;
+}
+
+.mission{
+    position: relative;
+
+    max-width: 900px;
+    margin-block-start: 3rem;
+    margin-inline: auto;
+
+    display: flex;
+}
+
+.mission::after{
+    content: '';
+    position: absolute;
+    bottom: -1.5    rem;
+    right: 0;
+    height: 3px;
+    width: 60%;
+}
+
+.mission__img{
+    max-width: 50%;
+    aspect-ratio: 3 / 2;
+}
+
+.mission__content{
+    margin-block-start: 2.5rem;
+    margin-inline-start: 1.5rem;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 2rem;
+}
+
+.mission__header{
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.mission__body{
+    color: #1D3D58;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: .85px;
+    line-height: 1.8;
+}
+
+.team{
+    max-width: 900px;
+    margin-block-start: 3rem;
+    margin-inline: auto;
+    /* margin-inline: 1rem; */
+
+    font-family: Inter;
+}
+
+.team__header{
+    position: relative;
+    margin-block-end: 1rem;
+    margin-inline: auto;
+    width: fit-content;
+    font-family: "Istok Web";
+    font-size: 1.75rem;
+    text-align: center;
+    text-decoration: solid 1px black;
+}
+
+.team__header::after{
+    content: '';
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+    height: 2px;
+    width: 70%;
+    background-color: black;
+}
+
+.team__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.team__card{
+    padding-block: 1rem;
+    padding-inline: 1.75rem;
+    flex-basis: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 32px;
+    border: 1px solid var(--Secondary-Blue, #EAF5FF);
+    background: var(--J---Primary-Background, #FFF);
+    box-shadow: 2px 4px 6px 2px rgba(29, 61, 88, 0.10);
+}
+
+.team__img{
+    max-width: 10rem;
+    margin-block-end: 1rem;
+
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+span:has(.team__card__subheading){
+    padding-inline: 1rem;
+    color: red;
+}
+
+.team__card__subheader{
+    padding-block-end: .25rem;
+
+    border-bottom: solid 1px #D60F84;
+
+    color: var(--J---Third, #1D3D58);
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.team__card__header{
+    margin-block-start: .25rem;
+    margin-block-end: 1rem;
+
+    font-family: "Istok Web";
+    font-weight: 800;
+}
+
+.team__card__body{
+    line-height: 1.5;
+}
+
+.cta-block__container{
+    margin-block-start: 3rem;
+    padding-block: 5rem;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #EAF5FF;
+}
+
+.cta-block{
+    margin-inline: auto;
+    max-width: 40ch;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    
+    color: #1D3D58;
+    font-family: Inter;
     text-align: center;
 }
 
-.intro__content {
-    margin-bottom: 1.5rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1.5rem;
-}
-
-.intro__title {
-    color: var(--J---Third, #1D3D58);
-    font-family: Inter;
-    font-size: clamp(1.75rem, 0.8125rem + 3vw, 2.5rem);
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-}
-
-.intro__subheading {
-    color: var(--J---Third, #1D3D58);
-    font-family: Inter;
-    font-size: clamp(1.75rem, 0.8125rem + 3vw, 2.5rem);
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.intro__text {
-    color: var(--J---Third, #1D3D58);
-    font-family: Inter;
-    font-size: clamp(1.15rem, 0.7125rem + 1.4vw, 1.5rem);
-    font-style: normal;
-    font-weight: 200;
-    line-height: 1.5;
-}
-
-.intro__img {
-    width: 100%;
-    max-width: 1200px;
-    margin-inline: 3rem;
-
-    display: flex;
-    justify-content: center;
-}
-
-.our-staff {
-    max-width: 1920px;
-    margin-inline: 3rem;
-    margin-bottom: 6rem;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 3rem;
-    row-gap: 2rem;
-
-}
-
-.our-staff__card {
-    max-width: 16rem;
-    padding-block: 1.25rem;
-    padding-inline: 1rem;
-
-    border-radius: 1.5625rem;
-    border: 1px solid var(--Border-Grey, #D2D2D2);
-    background: var(--Faded-Blue, rgba(195, 201, 213, 0.16));
-    box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.25);
-}
-
-.our-staff__top {
-    display: flex;
-}
-
-.our-staff__details {
-    padding-block: 1.5rem;
-    padding-inline: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.our-staff__text {
-    padding-block: 3rem;
-    color: #000;
+.cta-block__header{
     font-family: "Istok Web";
-    font-weight: 400;
-    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cta-block__body{
+    line-height: 1.6;
+}
+
+.cta-block__button{
+    margin-inline: auto;
+    padding-block: .75rem;
+    padding-inline: 3.5rem;
+    width: fit-content;
+
+    background-color: #FFE74A;
+    border: none;
+    border-radius: 1rem;
 }
