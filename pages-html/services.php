@@ -72,7 +72,7 @@
                             <li>SEO & Creative Copywriting</li>
                             <li>Accessibility Optimization</li>
                         </ul>
-                        <!-- <a href="#">See More</a> -->
+                        <a href="./service__webdev.php">See More</a>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                             <li>Lifestyle photos</li>
                             <li>workspace Photos</li>
                         </ul>
-                        <!-- <a href="#">See More</a> -->
+                        <a href="./service__photography.php">See More</a>
                     </div>
                     <div class="img-col">
                         <img src="../assets/services-page/camera.png" alt="">
@@ -122,7 +122,7 @@
                             <li>Bags</li>
                             <li>Approns</li>
                         </ul>
-                        <!-- <a href="#">See More</a> -->
+                        <a href="./service__merch.php">See More</a>
                     </div>
                 </div>
             </div>

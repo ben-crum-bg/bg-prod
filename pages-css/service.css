@@ -1,0 +1,226 @@
+.service__intro{
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-family: "Istok Web";
+}
+.service__intro__header{
+    margin-inline: auto;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.service__intro__body{
+    margin-inline: auto;
+
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+.service__employee{
+    margin-block-start: 3rem;
+    margin-inline: auto;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    max-width: 600px;
+
+    display: flex;
+    gap: 2rem;
+
+    border-radius: 40px;
+    border: solid 1px #EAF5FF;
+    box-shadow: 2px 4px 6px 2px rgba(29, 61, 88, 0.10);
+    font-family: Inter;
+}
+.service__employee__img{
+    max-width: 12rem;
+
+    aspect-ratio: 1 / 1;
+    border-radius: 1.2rem;
+    object-fit: cover;
+}
+.service__employee__content{
+    display: flex;
+    flex-direction: column;
+}
+.service__employee__subheader{
+    position: relative;
+    margin-block-start: 1rem;
+}
+.service__employee__subheader::after{
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: -2px;
+    height: 1px;
+    width: 40%;
+    background-color: #D60F84;
+}
+.service__employee__header{
+    margin-block-start: 10px;
+    margin-block-end: 1rem;
+
+    font-family: "Istok Web";
+    font-weight: 700;
+}
+.service__employee__body{
+    max-width: 30ch;
+
+    line-height: 1.5;
+}
+.service__employee__button{
+    margin-block-start: 1.25rem;
+    padding-block: .75rem;
+    padding-inline: 2.25rem;
+    width: fit-content;
+
+    align-self: center;
+
+    background: none;
+    background-color: #FFFAFB;
+    border: solid 1px #D60F84;
+    border-radius: 1rem;
+    color: #D60F84;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.service__pricing{
+    margin-block-start: 3rem;
+    margin-inline: auto;
+    max-width: 600px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+}
+.service__pricing__details{
+    filter: drop-shadow(3px 4px 6px rgba(29, 61, 88, 0.20));
+}
+.service__pricing__summary{
+    /* padding-block: .75rem; */
+    padding-inline: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #FFE74A;
+    border-radius: .75rem;
+    list-style: none;
+}
+.service__pricing__summary::after{
+    content: '+';
+
+    font-size: 2.5rem;
+}
+.service__pricing__details[open] .service__pricing__summary::after{
+    content: '-';
+}
+.service__pricing__details[open]::details-content{
+    position: relative;
+    top: -1rem;
+    left: 0;
+    z-index: -1;
+
+    padding-block-start: 2rem;
+    padding-block-end: 1rem;
+    padding-inline: 1.5rem;
+    
+    background-color: #FFF9E0;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+}
+
+.service__packages{
+    --inline-margin: 1rem;
+    --row-spacing: 1.5rem;
+
+    max-width: 900px;
+    margin-block: 3rem;
+    margin-inline: auto;
+
+    font-family: Inter;
+}
+.service__packages__header{
+    margin-inline: var(--inline-margin);
+
+    font-family: "Istok Web";
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.service__packages__body{
+    margin-block-start: .5rem;
+    margin-inline: var(--inline-margin);
+}
+.service__packages__cards{
+    margin-block-start: 2rem;
+    margin-inline: var(--inline-margin);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 3rem;
+}
+.service__packages__cards div:has(table){
+    padding-block: 1rem;
+    padding-inline: 1rem;
+
+    flex: 1;
+
+    background-color: #EAF5FF;
+    border-radius: 1rem;
+    border: 1px solid var(--Border-Grey, #D2D2D2);
+    box-shadow: 2px 4px 7.5px 0 rgba(29, 61, 88, 0.25);
+}
+.service__packages__cards table{
+    border-spacing: 0 var(--row-spacing);
+    width: 100%;
+}
+.service__packages__cards caption{
+    position: relative;
+
+    font-family: "Istok Web";
+    font-weight: 600;
+    text-align: start;
+}
+.service__packages__cards caption::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: .5px;
+    width: 30%;
+
+    background: linear-gradient(90deg, #1D3D58 0%, rgba(46, 97, 139, 0.50) 50%, rgba(63, 133, 190, 0.00) 100%);
+}
+.service__packages__cards thead td{
+    font-weight: 200;
+}
+.service__packages__cards tr{
+    position: relative;
+}
+.service__packages__cards tr::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: .5px;
+    width: 100%;
+    background: linear-gradient(90deg, #1D3D58 0%, rgba(63, 133, 190, 0.25) 51.44%, #1D3D58 100%);
+}
+.service__packages__cards .column-right{
+    text-align: end;
+}
+.service__packages__cards tbody tr:last-child{
+    font-weight: 600;
+}
